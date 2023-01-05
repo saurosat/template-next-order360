@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  /*padding: 6rem;*/
   min-height: 100vh;
 }
 
@@ -42,7 +42,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
+  /*width: var(--max-width);*/
   max-width: 100%;
 }
 
@@ -143,11 +143,9 @@
   inset: 0;
   padding: 1px;
   border-radius: var(--border-radius);
-  background: linear-gradient(
-    to bottom right,
-    rgba(var(--tile-start-rgb), 1),
-    rgba(var(--tile-end-rgb), 1)
-  );
+  background: linear-gradient(to bottom right,
+      rgba(var(--tile-start-rgb), 1),
+      rgba(var(--tile-end-rgb), 1));
   background-clip: content-box;
 }
 
@@ -182,7 +180,8 @@
   .grid {
     grid-template-columns: 1fr;
     margin-bottom: 120px;
-    max-width: 320px;
+    /*max-width: 320px;*/
+    max-width: 100%;
     text-align: center;
   }
 
@@ -226,11 +225,9 @@
     border-radius: 0;
     border: none;
     border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
+    background: linear-gradient(to bottom,
+        rgba(var(--background-start-rgb), 1),
+        rgba(var(--callout-rgb), 0.5));
     background-clip: padding-box;
     backdrop-filter: blur(24px);
   }
@@ -241,19 +238,39 @@
     inset: auto 0 0;
     padding: 2rem;
     height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgb(var(--background-end-rgb)) 40%);
     z-index: 1;
   }
 }
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
+@media (max-width: 700px) {
   .grid {
+    /*grid-template-columns: repeat(2, 50%);*/
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .grid {
+    /*grid-template-columns: repeat(2, 50%);*/
     grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1320px) {
+  .grid {
+    /*grid-template-columns: repeat(2, 50%);*/
+    grid-template-columns: repeat(3, 33%);
+  }
+}
+
+@media (min-width: 1321px) {
+  .grid {
+    /*grid-template-columns: repeat(2, 50%);*/
+    grid-template-columns: repeat(3, 33%);
   }
 }
 
@@ -272,6 +289,7 @@
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0deg);
   }
