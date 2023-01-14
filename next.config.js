@@ -6,9 +6,7 @@ const nextConfig = {
   },
 
   //Apply fix patch for process.cwd() issue as per https://github.com/vercel/next.js/issues/8251#issuecomment-915287535
-  experimental: {
-    nftTracing: true
-  }
+  output: 'standalone'
 }
 
 module.exports = nextConfig
