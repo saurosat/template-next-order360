@@ -1,11 +1,16 @@
+import imgs from "../test/images.json";
+import posts from "../test/posts.json";
+import products from "../test/products.json";
+import users from "../test/users.json";
 import { emptyPost, emptyProduct, Img, Post, Product, User } from "./DTO";
 
 class DummyData {
-    dir = "test";
-    path = require("path");
+    //dir = "test";
+    //path = require("path");
     constructor() {
-        this.dir = this.path.resolve(process.cwd(), this.dir);
+        //this.dir = this.path.resolve(process.cwd(), this.dir);
     }
+    /**
     readJson(fileName: string): Object[] {
         const fs = require("fs");
         try {
@@ -17,7 +22,7 @@ class DummyData {
             console.error(error);
             return [];
         }
-    }
+    } */
     getPost(id: string, loadAll?: boolean): Post {
         let posts: Post[] = this.posts;
         let matched: Post = emptyPost;
@@ -66,16 +71,16 @@ class DummyData {
         return matches;
     }
     get posts(): Post[] {
-        return this.readJson("../test/posts.json") as Post[];
+        return [...posts];//this.readJson("../test/posts.json") as Post[];
     }
     get products(): Product[] {
-        return this.readJson("../test/products.json") as Product[];
+        return [...products]; //this.readJson("../test/products.json") as Product[];
     }
     get images(): Img[] {
-        return this.readJson("../test/images.json") as Img[];
+        return [...imgs];//this.readJson("../test/images.json") as Img[];
     }
     get users(): User[] {
-        return this.readJson("../test/users.json") as User[];
+        return [...users];//[this.readJson("../test/users.json") as User[]];
     }
 }
 export default DummyData;
