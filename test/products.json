@@ -1,0 +1,102 @@
+[
+    {
+        "id": "PRODUCT9",
+        "title": "officia labore nisi quis commodo",
+        "info": "Nostrud ipsum laboris eiusmod consectetur ipsum labore quis ea dolor mollit. Cupidatat nostrud ullamco ipsum mollit.",
+        "imgIds": [
+            "IMG9",
+            "IMG10",
+            "IMG11"
+        ]
+    },
+    {
+        "id": "PRODUCT10",
+        "title": "sunt nulla dolore ex sunt",
+        "info": "Et aute laboris cupidatat in velit irure ad eiusmod aute ipsum nulla irure. Ad excepteur culpa consequat.",
+        "imgIds": [
+            "IMG12",
+            "IMG13",
+            "IMG14"
+        ]
+    },
+    {
+        "id": "PRODUCT11",
+        "title": "minim veniam laborum veniam dolor",
+        "info": "Incididunt ut eiusmod aliquip mollit laboris sunt irure non in sint elit consectetur. Deserunt ipsum deserunt ea minim aliquip adipisicing.",
+        "imgIds": [
+            "IMG15",
+            "IMG16",
+            "IMG17"
+        ]
+    },
+    {
+        "id": "PRODUCT12",
+        "title": "non sint incididunt laboris magna",
+        "info": "Nisi incididunt sit sit est deserunt Lorem occaecat commodo velit ex do ea nulla amet. Eu exercitation sunt est dolor amet enim deserunt do dolor ullamco qui.",
+        "imgIds": [
+            "IMG18",
+            "IMG19",
+            "IMG20"
+        ]
+    },
+    {
+        "id": "PRODUCT13",
+        "title": "occaecat Lorem nostrud quis laboris",
+        "info": "Fugiat irure deserunt ea do velit sint deserunt cupidatat cupidatat laborum eu consequat qui. Nulla exercitation ad ut.",
+        "imgIds": [
+            "IMG21",
+            "IMG22",
+            "IMG23"
+        ]
+    },
+    {
+        "id": "PRODUCT14",
+        "title": "duis cupidatat aliquip veniam eu",
+        "info": "Non excepteur cillum dolor officia qui mollit excepteur excepteur labore nisi cillum ad sunt. Ea sint ea quis esse nostrud enim proident.",
+        "imgIds": [
+            "IMG24",
+            "IMG25",
+            "IMG26"
+        ]
+    },
+    {
+        "id": "PRODUCT15",
+        "title": "do officia excepteur ad sit",
+        "info": "Non pariatur consequat nisi fugiat nostrud consectetur sint nulla. Aliqua laboris reprehenderit nostrud labore duis consequat sint excepteur amet officia sint non laboris laboris mollit.",
+        "imgIds": [
+            "IMG27",
+            "IMG28",
+            "IMG29"
+        ]
+    },
+    {
+        "id": "PRODUCT16",
+        "title": "adipisicing fugiat laboris quis ea",
+        "info": "Sint velit incididunt tempor proident fugiat sunt laborum aliqua dolore consequat ex veniam ex. Sint officia deserunt amet laboris qui amet voluptate quis ut labore.",
+        "imgIds": [
+            "IMG30",
+            "IMG31",
+            "IMG32"
+        ]
+    },
+    {
+        "id": "PRODUCT17",
+        "title": "incididunt nulla veniam in in",
+        "info": "Commodo esse aliquip ea voluptate sint ea anim laborum cupidatat Lorem. Velit ut reprehenderit ad est ad eiusmod duis sunt.",
+        "imgIds": [
+            "IMG33",
+            "IMG34",
+            "IMG35"
+        ]
+    },
+    {
+        "id": "PRODUCT18",
+        "title": "consectetur ullamco labore reprehenderit do",
+        "info": "Ad tempor est minim amet nulla incididunt in nulla est sit enim veniam et. Magna aliquip nisi duis sint ullamco ullamco esse fugiat.",
+        "imgIds": [
+            "IMG36",
+            "IMG37",
+            "IMG38"
+        ]
+    }
+]

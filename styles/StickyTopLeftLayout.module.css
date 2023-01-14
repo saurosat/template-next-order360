@@ -1,0 +1,106 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.footer {
+    margin-left: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    max-width: 100%;
+    text-align: left;
+}
+
+.topleft_sticky {
+    /* Safari: */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    max-height: 30px;
+    max-width: 100vh;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.topleft_sticky * {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+}
+
+.layout_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+.logo {
+    height: 250px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .vercelLogo {
+        filter: invert(1);
+    }
+
+    .logo img {
+        filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+    }
+}
+
+@media (orientation: landscape) {
+    @media (min-width: 600px) and (max-width: 899) {
+        .layout_grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .topleft_sticky {
+            max-height: 100vh;
+            font-size: 28px;
+        }
+    }
+
+    @media (min-width: 900px) {
+        .layout_grid {
+            grid-template-columns: 38% 1fr;
+        }
+
+        .topleft_sticky {
+            max-height: 100vh;
+            font-size: 38px;
+        }
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    .vercelLogo {
+        filter: invert(1);
+    }
+
+    .logo,
+    .thirteen img {
+        filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
