@@ -1,48 +1,45 @@
-import { Inter } from '@next/font/google';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import ProductCard from '../components/cards/products/ProductCard';
-import { mockProductCardProps } from '../components/cards/products/ProductCard.mocks';
-import styles from '../styles/Home.module.css';
 
-const inter = Inter({ subsets: ['latin'] });
+import MasterLayout from '../components/cards/layouts/MasterLayout';
+import PostCard from '../components/cards/posts/PostCard';
+import TextCard from '../components/cards/texts/TextCard';
+import DummyData from '../lib/DataSource';
+import { Post } from '../lib/DTO';
 
-const Home: NextPage = () => {
+export async function getServerSideProps() {
+  //let imgPropsArray: ImageCardPropsArray = { products: productData.products };
+  const dummyData = new DummyData();
+  const posts = await dummyData.posts;
+  return {
+    props: { posts }
+  };
+}
+interface IProps {
+  posts: Post[];
+}
+function HomeInfo() {
   return (
-    <>
-      <Head>
-        <title>Products</title>
-        <meta name="description" content="Product listing page" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={styles.main}>
-        <h1 className={styles.titles}>Products</h1>
+    <TextCard key={123}
+      header="Best selected products all over the world"
+      body="Laborum tempor laboris consectetur veniam fugiat officia id mollit Lorem. Laboris nostrud ad irure fugiat sit adipisicing sint id. Quis proident excepteur non incididunt commodo."
+    />
+  );
+}
 
-        <div className={styles.grid}>
-          <ProductCard {...mockProductCardProps} />
-          <ProductCard {...mockProductCardProps} />
-          <ProductCard {...mockProductCardProps} />
-          <ProductCard {...mockProductCardProps} />
-          <ProductCard {...mockProductCardProps} />
-          <ProductCard {...mockProductCardProps} />
-          <ProductCard {...mockProductCardProps} />
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </>
+export function PostCardArray(posts: Post[]): JSX.Element[] {
+  if (posts === null || posts.length === 0) return [];
+  return posts.map((post: Post) => (
+    <PostCard key={post.id} {...post} />
+  )
+  );
+}
+
+function Home({ posts }: IProps) {
+  let homeInfo = {
+    header: "Best selected products all over the world",
+    body: "Laborum tempor laboris consectetur veniam fugiat officia id mollit Lorem. Laboris nostrud ad irure fugiat sit adipisicing sint id. Quis proident excepteur non incididunt commodo."
+  };
+  return (
+    <MasterLayout numLeftEles={1} rightPanelLayout="grid">{{ leftElements: [HomeInfo()], rightElements: PostCardArray(posts) }}</MasterLayout>
   );
 }
 export default Home;

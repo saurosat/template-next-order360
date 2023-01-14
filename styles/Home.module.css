@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /*padding: 6rem;*/
   min-height: 100vh;
 }
 
@@ -243,6 +242,12 @@
         rgb(var(--background-end-rgb)) 40%);
     z-index: 1;
   }
+}
+
+.layout_block {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 
 /* Tablet and Smaller Desktop */
